@@ -1,0 +1,57 @@
+@font-face {
+    font-family: LXGW;
+    src: url("../assets/fonts/wk.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: SY;
+    src: url("../assets/fonts/SourceHanSerifCN-Bold-2.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: SY;
+    text-align: center;
+}
+
+h3 {
+    font-family: LXGW;
+    text-align: center;
+}
+
+button {
+    font-family: LXGW;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+}
+
+img {
+    width: 60%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    text-align: center;
+}
+
+h2{
+    font-family: LXGW;
+    text-align: center;
+}
+
+p{
+    font-family: LXGW;
+    text-align: center;
+}
