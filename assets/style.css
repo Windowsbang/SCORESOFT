@@ -1,70 +1,141 @@
-@font-face {
-    font-family: LXGW;
-    src: url("../assets/fonts/wk.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: SY;
-    src: url("../assets/fonts/SourceHanSerifCN-Bold-2.otf");
-    font-weight: normal;
-    font-style: normal;
-}
-
-h1 {
-    font-family: SY;
-    text-align: center;
-    
-}
-
-h3 {
-    font-family: LXGW;
-    text-align: center;
-}
-
-button {
-    font-family: LXGW;
+#nnui {
     display: block;
-    margin: 0 auto;
-    width: 50%;
-    height: 50px;
-    background-color: #87cefa;
+    width: 80%;
+    max-width: 300px;
+    /* 限制最大宽度 */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #a94547;
     color: white;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    /* 修正transition属性值 */
 }
 
-img {
-    width: 40%;
-    height: auto;
+#nnui:hover {
+    background-color: #cf5457;
+    /* 鼠标悬停时按钮背景颜色变化 */
+    color: #f8f8f8;
+    /* 鼠标悬停时按钮文字颜色变化 */
 }
+
 
 a {
     text-decoration: none;
+    color: #a94547;
+    transition: color 0.3s;
 }
 
-div {
-    text-align: center;
+a:hover {
+    color: #cf5457;
 }
 
-h2{
-    font-family: LXGW;
-    text-align: center;
+header {
+    margin: 0 auto;
+    background-color: black;
+    height: 50px;
 }
 
-p{
-    font-family: LXGW;
-    text-align: center;
+header a {
+    color: #fff;
 }
 
-#header_color{
-    background: linear-gradient(180deg, #87cefa, #9bd5fb, #addcfc, #bfe3fc, #d0eafd, #e0f1fe, #f0f8fe, #ffffff);
+ul {
+    list-style: none;
+    display: flex;
     width: 100%;
+    margin: auto;
+    padding: 15px;
+}
+
+li {
+    text-align: center;
+
+    width: 30%;
+}
+
+body {
+    margin: 0;
+}
+
+#slogan {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* 水平居中所有子元素 */
+}
+
+#slogan img {
+    height: 300px;
+    /* 设置图片高度 */
+    /* 移除 margin-right: auto;，因为我们现在是垂直布局 */
+}
+
+#slogan h1 {
+    padding: 20px;
+    /* 根据需要调整内边距 */
+    /* 移除 margin-left: auto;，因为我们现在是垂直布局 */
+    text-align: center;
+    /* 如果你想让h1文本居中显示 */
+}
+
+/* 如果#slogan内有h2元素，并且你想要它在h1的下方 */
+#slogan h2 {
+    margin-top: 20px;
+    /* 根据需要添加上边距，以分隔h1和h2 */
+    text-align: center;
+    /* 如果你想让h2文本居中显示 */
+}
+
+#use {
+
+    text-align: center;
+    /* 水平居中所有子元素 */
+}
+
+#nnui {
+    width: 100%;
+}
+
+#use {
     height: 100px;
 }
 
-#footer_color{
-    background: linear-gradient(0deg, #87cefa, #9bd5fb, #addcfc, #bfe3fc, #d0eafd, #e0f1fe, #f0f8fe, #ffffff);
-    width: 100%;
-    height: 100px;
+#useimg {
+    text-align: center;
+}
+
+#useimg img {
+    height: 250px;
+}
+
+
+#use p {
+    font-size: 15px;
+}
+
+#nnuibf {
+    border-width: 0px;
+}
+
+#update {
+    text-align: center;
+}
+
+#update iframe {
+    background-color: #f8f8f8;
+    border: none;
+    height: 50px;
+    width: 60%;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+}
+
+footer img {
+    height: 20px;
 }
