@@ -36,6 +36,10 @@ header {
     margin: 0 auto;
     background-color: black;
     height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 header a {
@@ -120,11 +124,11 @@ body {
     border-width: 0px;
 }
 
-#update {
+#updata {
     text-align: center;
 }
 
-#update iframe {
+#updata iframe {
     background-color: #f8f8f8;
     border: none;
     height: 50px;
