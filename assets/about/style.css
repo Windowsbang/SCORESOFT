@@ -8,7 +8,7 @@ a:hover {
     color: #cf5457;
 }
 
-html{
+html {
     position: relative;
     min-height: 100%;
 }
@@ -42,12 +42,12 @@ li {
     width: 30%;
 }
 
-body{
+body {
     margin-bottom: 60px;
     margin: 0;
 }
 
-#title{
+#title {
     text-align: center;
 
     color: #a94547;
@@ -66,7 +66,8 @@ footer img {
     height: 20px;
 }
 
-#jxbjintro h2,h3{
+#jxbjintro h2,
+h3 {
     text-indent: 20px;
 }
 
@@ -75,15 +76,15 @@ footer img {
     border-top: 3px solid transparent;
     background-image: linear-gradient(to right, #ccc, #ccc 20%, transparent 20%, transparent 40%, #ccc 40%);
     background-size: 40px 4px;
-  }
+}
 
-#updatadate{
+#updatadate {
     text-align: center;
 }
 
-hr{
+hr {
     border: none;
     border-top: 3px solid transparent;
-    background-image: linear-gradient(to right, #ccc, #ccc 50%,transparent 50%, #ccc 50%);
+    background-image: linear-gradient(to right, #ccc, #ccc 50%, transparent 50%, #ccc 50%);
     background-size: 40px 4px;
 }
