@@ -66,32 +66,32 @@ body {
 
 #slogan {
     display: flex;
-    align-items: center;
+    justify-content: center; /* 水平居中所有子元素 */
+    align-items: center; /* 垂直居中所有子元素 */
     text-align: center;
-    /* 水平居中所有子元素 */
 }
 
-#slogan img {
-    height: 300px;
-    /* 设置图片高度 */
-    /* 移除 margin-right: auto;，因为我们现在是垂直布局 */
+#logo {
+    height: 300px; /* 根据需要调整图片高度 */
+    margin-right: 20px; /* 根据需要调整图片和文字之间的间距 */
 }
 
-#slogan h1 {
-    padding: 20px;
-    /* 根据需要调整内边距 */
-    /* 移除 margin-left: auto;，因为我们现在是垂直布局 */
-    text-align: center;
-    /* 如果你想让h1文本居中显示 */
+#text-content {
+    display: flex;
+    flex-direction: column; /* 子元素垂直排列 */
+    justify-content: center; /* 垂直居中文本内容 */
 }
 
-/* 如果#slogan内有h2元素，并且你想要它在h1的下方 */
-#slogan h2 {
-    margin-top: 20px;
-    /* 根据需要添加上边距，以分隔h1和h2 */
-    text-align: center;
-    /* 如果你想让h2文本居中显示 */
+#introduction {
+    font-size: 30px;
 }
+
+#detail {
+    margin: 0; /* 移除h3的默认外边距 */
+    text-align: center;
+}
+
+/* 其他样式保持不变 */
 
 #use {
 

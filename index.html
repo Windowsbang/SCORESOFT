@@ -17,10 +17,47 @@
     -->
     <script>
         console.log('机械斑鸠软件');
+
+        function siteTime() {
+            window.setTimeout("siteTime()", 1000);
+            var seconds = 1000;
+            var minutes = seconds * 60;
+            var hours = minutes * 60;
+            var days = hours * 24;
+            var years = days * 365;
+            var today = new Date();
+            var todayYear = today.getFullYear();
+            var todayMonth = today.getMonth() + 1;
+            var todayDate = today.getDate();
+            var todayHour = today.getHours();
+            var todayMinute = today.getMinutes();
+            var todaySecond = today.getSeconds();
+            /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+            year - 作为date对象的年份，为4位年份值
+            month - 0-11之间的整数，做为date对象的月份
+            day - 1-31之间的整数，做为date对象的天数
+            hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+            minutes - 0-59之间的整数，做为date对象的分钟数
+            seconds - 0-59之间的整数，做为date对象的秒数
+            microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+            var t1 = Date.UTC(2024, 0o6, 26, 0o7, 13, 0o0); //北京时间2017-09-16 00:00:00创建网站的时间
+            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+            var diff = t2 - t1;
+            var diffYears = Math.floor(diff / years);
+            var diffDays = Math.floor((diff / days) - diffYears * 365);
+            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+            document.getElementById("sitetime").innerHTML = "本站已运行" + diffYears + "年" + diffDays + "天" + diffHours + "时" + diffMinutes + "分钟" + diffSeconds + "秒";
+        }
+        siteTime();
+
     </script>
+    <!-- 引入不蒜子计数 -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <meta charset="utf-8" /><!--万国码-->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9340287549117600"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <!--自适应-->
@@ -41,18 +78,22 @@
 
 <body>
     <div id="slogan">
-        <img src="./assets/img/机械斑鸠软件新字.png" />
-        <h1>ScoreNNUI</h1>
-        <h3>一个简洁、优雅的<br />随机选人软件</h3>
+        <img id="logo" src="./assets/img/机械斑鸠软件新字.png" />
+        <div id="text-content">
+            <strong><span id="introduction">ScoreNNUI</span></strong>
+            <h3 id="detail">一个简洁、优雅的<br />随机选人软件</h3>
+        </div>
     </div>
+
     <div id="useimg">
         <img src="./assets/img/use.jpg" />
     </div>
     <div id="use">
         <a href="./assets/2.8.1/nnui.exe"><button id="nnui">开始使用</button></a>
-        <p>或者，使用<a href="./assets/2.8.1/nnuibf.exe"><button id="nnuibf">大字版</button></a><br/><br/>还是下载<a href="./assets/Countdown.exe"><button id="nnuibf">倒计时</button></a>？</p>
+        <p>或者，使用<a href="./assets/2.8.1/nnuibf.exe"><button id="nnuibf">大字版</button></a><br /><br />还是下载<a
+                href="./assets/Countdown.exe"><button id="nnuibf">倒计时</button></a>？</p>
     </div>
-    <br/><br/>
+    <br /><br />
     <div id="updata">
         <h2>最近更新记录</h2>
         <iframe src="./assets/content_utf8.txt"></iframe>
@@ -73,6 +114,8 @@
         <p>
             <font color="white">Website Version: 2.0 </font>
         </p>
+        <span id="sitetime" style="color: white;"></span>
+        <br /><br />
         <a href="https://github.com/Windowsbang">
             <img src="./assets/img/LsGithub.svg" alt="GitHub">
         </a>
@@ -80,6 +123,13 @@
         <a href="https://www.jxbjsoft.cn">
             <img src="./assets/img/机械斑鸠软件white.svg" alt="JXBJSoft">
         </a>
+        <font color="white">
+            <center>
+                浏览量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>👀 | 访客数：<span
+                    id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>👦
+            </center>
+        </font>
+
     </div>
 </footer>
 
