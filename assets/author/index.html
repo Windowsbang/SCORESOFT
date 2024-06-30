@@ -11,6 +11,18 @@
     <title>关于NNUI</title>
     <link rel="icon" href="./assets/img/favicon.ico" />
     <link href="../about/style.css" rel="stylesheet" type="text/css" /><!--Title-->
+    <script>window.addEventListener('load', function () {
+            var footer = document.getElementById('footer');
+            var pageHeight = document.documentElement.scrollHeight; // 页面内容总高度
+            var windowHeight = window.innerHeight; // 视口高度
+
+            // 如果页面内容高度小于视口高度
+            if (pageHeight < windowHeight) {
+                footer.style.position = 'fixed'; // 固定在视口底部
+            } else {
+                footer.style.position = 'absolute'; // 固定在页面底部
+            }
+        });</script>
 </head>
 
 <body>
@@ -22,18 +34,20 @@
         </ul>
     </header>
     <br /><br /><br />
-    <div id="title">
-        <h1>关于ScoreNNUI</h1>
-    </div>
-    <div id="author">
-        <h2>闫艺涵</h2>
-        <hr id="dot" />
-        <h3>一星级志愿者；一个计算机软件著作权获得者；芜湖市科技创新大赛一等奖及专项奖获得者；24届第一批准共青团员；机械斑鸠软件创办者</h3>
-        <hr />
-    </div>
-    <br />
-    <div id="updatadate">
-        <p>本页于2024年6月27日7:25更新，具体情况可能有所变动，恕不另行通知</p>
+    <div id="content-wrapper">
+        <div id="title">
+            <h1>关于ScoreNNUI</h1>
+        </div>
+        <div id="author">
+            <h2>闫艺涵</h2>
+            <hr id="dot" />
+            <h3>一星级志愿者；一个计算机软件著作权获得者；芜湖市科技创新大赛一等奖及专项奖获得者；24届第一批准共青团员；机械斑鸠软件创办者</h3>
+            <hr />
+        </div>
+        <br />
+        <div id="updatadate">
+            <p>本页于2024年6月27日7:25更新，具体情况可能有所变动，恕不另行通知</p>
+        </div>
     </div>
     <footer>
         <div id="copyright">

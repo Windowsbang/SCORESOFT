@@ -8,10 +8,6 @@ a:hover {
     color: #cf5457;
 }
 
-html {
-    position: relative;
-    min-height: 100%;
-}
 
 header {
     margin: 0 auto;
@@ -43,7 +39,6 @@ li {
 }
 
 body {
-    margin-bottom: 60px;
     margin: 0;
 }
 
@@ -53,13 +48,34 @@ body {
     color: #a94547;
 }
 
+/* 确保body至少占据整个视口高度 */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* 使用flexbox布局确保内容占据可用空间，footer固定在底部 */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 内容容器，用于包含页面的所有内容 */
+#content-wrapper {
+    flex: 1; /* 让内容容器占据除footer外的所有空间 */
+    overflow: auto; /* 如果内容过多，允许滚动 */
+}
+
 footer {
-    position: absolute;
-    bottom: 0;
     background-color: #000;
     padding: 20px;
+    text-align: center;
+    color: white;
+    /* footer固定在底部，不随内容滚动 */
+    position: relative; /* 默认相对定位 */
     width: 100%;
-    margin-right: 0px;
+    /* 以下属性确保footer在内容不足时也显示在底部 */
+    /* margin-top: auto; 这行代码可以保留，也可以去掉，取决于你希望footer的确切位置 */
 }
 
 footer img {
