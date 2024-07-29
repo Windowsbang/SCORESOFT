@@ -64,7 +64,7 @@
     <meta name="description" content="机械斑鸠软件NNUI下载" /><!--SEOdes-->
     <title>机械斑鸠软件NNUI下载</title>
     <link rel="icon" href="./assets/img/favicon.ico" />
-    <link href="./assets/style.css" rel="stylesheet" type="text/css" /><!--Title-->
+    <link href="../style.css" rel="stylesheet" type="text/css" /><!--Title-->
 </head>
 
 <header>
@@ -77,71 +77,17 @@
 
 <body>
     <div id="slogan">
-        <img id="logo" src="./assets/img/机械斑鸠软件新字.png" />
+        <img id="logo" src="/assets/img/机械斑鸠软件新字.png" />
         <div id="text-content">
             <strong><span id="introduction">ScoreNNUI</span></strong>
             <h3 id="detail">一个简洁、优雅的<br />随机选人软件</h3>
         </div>
-    </div>
 
-    <div id="useimg">
-        <img src="./assets/img/use.jpg" />
     </div>
-    <div id="use">
-        <a href="./assets/2.8.1/nnui.exe"><button id="nnui">开始使用</button></a>
-        <p>或者，使用<a href="./assets/2.8.1/nnuibf.exe"><button id="nnuibf">大字版</button></a><br /><br />还是下载<a
-                href="./assets/Setup_Countdown.msi"><button id="nnuibf">倒计时</button></a>？</p>
-    </div>
-    <br /><br />
-    <div id="updata">
-        <h2>最近更新记录</h2>
-        <iframe src="./assets/content_utf8.txt"></iframe>
-    </div>
-    <div id="postListContainer"></div>
-<script>
-    function loadAndProcessPosts() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'assets/blog/postlist.txt', true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var posts = xhr.responseText.split('\n'); // 正确的分割函数
-                var container = document.getElementById('postListContainer');
-                posts.forEach(function(post) {
-                    // 去除每行末尾的分号（如果存在），并去除空白字符
-                    var cleanPostTitle = post.replace(/;+$/, '').trim();
-    
-                    // 创建一个新的div元素
-                    var postDiv = document.createElement('div');
-                    postDiv.className = 'post';
-    
-                    // 创建h2元素并设置文本
-                    var postTitle = document.createElement('h2');
-                    postTitle.textContent = cleanPostTitle;
-    
-                    // 添加点击事件，导航到文章页面
-                    postTitle.onclick = function() {
-                        // 编码路径并构建完整的URL
-                        var encodedTitle = encodeURIComponent(cleanPostTitle.replace(/\s+/g, '-').toLowerCase());
-                        var postUrl = 'assets/blog/post/' + encodedTitle + '/index.html';
-                        window.location.href = postUrl;
-                    };
-    
-                    // 将h2元素添加到div中
-                    postDiv.appendChild(postTitle);
-    
-                    // 将div添加到容器中
-                    container.appendChild(postDiv);
-                });
-            }
-        };
-        xhr.send();
-    }
-    
-    // 页面加载完成后调用函数
-    window.onload = loadAndProcessPosts;
-    </Script>
+    <h1>奥运会，中国加油！</h1>
+    <h2>中国加油！</h2>
+
 </body>
-
 <br />
 <footer>
     <div id="copyright">
@@ -151,6 +97,9 @@
             </p>
         </strong>
         <hr />
+        <font color="white">
+            <a href="/"><h1>回到首页</h1></a>
+        </font>
         <p>
             <font color="white">Website Creater: Yihan Yan </font>
         </p>
@@ -160,11 +109,11 @@
         <span id="sitetime" style="color: white;"></span>
         <br /><br />
         <a href="https://github.com/Windowsbang">
-            <img src="./assets/img/LsGithub.svg" alt="GitHub">
+            <img src="/assets/img/LsGithub.svg" alt="GitHub">
         </a>
 
         <a href="https://www.jxbjsoft.cn">
-            <img src="./assets/img/机械斑鸠软件white.svg" alt="JXBJSoft">
+            <img src="/assets/img/机械斑鸠软件white.svg" alt="JXBJSoft">
         </a>
         <font color="white">
             <center>

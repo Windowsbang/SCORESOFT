@@ -66,20 +66,26 @@ body {
 
 #slogan {
     display: flex;
-    justify-content: center; /* 水平居中所有子元素 */
-    align-items: center; /* 垂直居中所有子元素 */
+    justify-content: center;
+    /* 水平居中所有子元素 */
+    align-items: center;
+    /* 垂直居中所有子元素 */
     text-align: center;
 }
 
 #logo {
-    height: 300px; /* 根据需要调整图片高度 */
-    margin-right: 20px; /* 根据需要调整图片和文字之间的间距 */
+    height: 300px;
+    /* 根据需要调整图片高度 */
+    margin-right: 20px;
+    /* 根据需要调整图片和文字之间的间距 */
 }
 
 #text-content {
     display: flex;
-    flex-direction: column; /* 子元素垂直排列 */
-    justify-content: center; /* 垂直居中文本内容 */
+    flex-direction: column;
+    /* 子元素垂直排列 */
+    justify-content: center;
+    /* 垂直居中文本内容 */
 }
 
 #introduction {
@@ -87,7 +93,8 @@ body {
 }
 
 #detail {
-    margin: 0; /* 移除h3的默认外边距 */
+    margin: 0;
+    /* 移除h3的默认外边距 */
     text-align: center;
 }
 
@@ -142,4 +149,65 @@ footer {
 
 footer img {
     height: 20px;
+}
+
+#postListContainer {
+    text-align: center;
+    /* 使容器内的文本居中 */
+}
+
+#postListContainer h2 {
+    display: inline-block;
+    /* 使h2作为行内块级元素显示 */
+    position: relative;
+    padding: 15px 20px;
+    /* 根据需要调整内边距 */
+    background-color: #a94547;
+    color: white;
+    border-style: dashed;
+    border-color: #a94547;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 20px auto;
+    /* 垂直方向上自动边距，水平方向上自动居中 */
+    width: 80%;
+    max-width: 300px;
+    overflow: hidden;
+    /* 确保内容不会溢出 */
+}
+
+#postListContainer h2::before {
+    content: "文";
+    /* 圆形内的文字 */
+    position: absolute;
+    top: 50%;
+    left: 5px; /* 根据需要调整 */
+    height: 40px; /* 圆形的高度 */
+    width: 40px; /* 圆形的宽度 */
+    line-height: 40px; /* 使文字垂直居中 */
+    border-radius: 50%; /* 圆形边框 */
+    background-color: #fff; /* 圆形背景色 */
+    color: #a94547; /* 圆形内文字的颜色 */
+    text-align: center; /* 文字在圆形内居中 */
+    font-weight: bold; /* 加粗文字 */
+    transform: translateY(-50%);
+    /* 垂直居中 */
+    opacity: 0; /* 初始时圆形不可见 */
+    transition: opacity 0.3s, transform 0.3s;
+    /* 鼠标悬停时圆形变化的动画 */
+}
+
+#postListContainer h2:hover::before {
+    opacity: 1; /* 鼠标悬停时圆形可见 */
+    transform: scale(1.5) translateY(-50%);
+    /* 鼠标悬停时圆形放大并垂直居中 */
+}
+
+#postListContainer h2:hover {
+    background-color: #cf5457;
+    /* 鼠标悬停时按钮背景颜色变化 */
+    text-align: right;
+    /* 鼠标悬停时文字居左 */
+    padding-left: 20px; /* 为圆形留出空间 */
 }
