@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <!--
                                                                                                                    
                                                                                                                
@@ -53,31 +54,29 @@
         siteTime();
     </script>
     <!-- 引入不蒜子计数 -->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <meta charset="utf-8" /><!--万国码-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9340287549117600"
-        crossorigin="anonymous"></script>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <!--万国码-->
+    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9340287549117600" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!--自适应-->
-    <meta name="keywords" content="机械斑鸠软件NNUI,机械斑鸠软件,机械斑鸠,jxbj,jxbjsoft,NNUI,NNUI下载" /><!--SEOkeywords-->
-    <meta name="description" content="机械斑鸠软件NNUI下载" /><!--SEOdes-->
+    <meta name="keywords" content="机械斑鸠软件NNUI,机械斑鸠软件,机械斑鸠,jxbj,jxbjsoft,NNUI,NNUI下载"><!--SEOkeywords-->
+    <meta name="description" content="机械斑鸠软件NNUI下载"><!--SEOdes-->
     <title>机械斑鸠软件NNUI下载</title>
-    <link rel="icon" href="./assets/img/favicon.ico" />
-    <link href="./assets/style.css" rel="stylesheet" type="text/css" /><!--Title-->
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <link href="./assets/style.css" rel="stylesheet" type="text/css"><!--Title-->
 </head>
 
 <header>
     <ul>
-        <li><a href="./assets/about/">关于我们</a></li>
-        <li><a href="./assets/honor/">获得荣誉</a></li>
-        <li><a href="./assets/author/">关于作者</a></li>
+        <li><a href="/assets/about/">关于我们</a></li>
+        <li><a href="/assets/honor/">获得荣誉</a></li>
+        <li><a href="/assets/author/">关于作者</a></li>
     </ul>
 </header>
 
 <body>
     <div id="slogan">
-        <img id="logo" src="./assets/img/机械斑鸠软件新字.png" />
+        <img id="logo" src="/assets/img/机械斑鸠软件新字.png" />
         <div id="text-content">
             <strong><span id="introduction">ScoreNNUI</span></strong>
             <h3 id="detail">一个简洁、优雅的<br />随机选人软件</h3>
@@ -85,60 +84,60 @@
     </div>
 
     <div id="useimg">
-        <img src="./assets/img/use.jpg" />
+        <img src="/assets/img/use.jpg" />
     </div>
     <div id="use">
-        <a href="./assets/2.8.1/nnui.exe"><button id="nnui">开始使用</button></a>
-        <p>或者，使用<a href="./assets/2.8.1/nnuibf.exe"><button id="nnuibf">大字版</button></a><br /><br />还是下载<a
-                href="./assets/Setup_Countdown.msi"><button id="nnuibf">倒计时</button></a>？</p>
+        <a href="/assets/2.8.1/nnui.exe"><button id="nnui">开始使用</button></a>
+        <p>或者，使用<a href="/assets/2.8.1/nnuibf.exe"><button id="nnuibf">大字版</button></a><br /><br />还是下载<a
+                href="/assets/Setup_Countdown.msi"><button id="nnuibf">倒计时</button></a>？</p>
     </div>
     <br /><br />
     <div id="updata">
         <h2>最近更新记录</h2>
-        <iframe src="./assets/content_utf8.txt"></iframe>
+        <iframe src="/assets/content_utf8.txt"></iframe>
     </div>
     <div id="postListContainer"></div>
-<script>
-    function loadAndProcessPosts() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'assets/blog/postlist.txt', true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var posts = xhr.responseText.split('\n'); // 正确的分割函数
-                var container = document.getElementById('postListContainer');
-                posts.forEach(function(post) {
-                    // 去除每行末尾的分号（如果存在），并去除空白字符
-                    var cleanPostTitle = post.replace(/;+$/, '').trim();
-    
-                    // 创建一个新的div元素
-                    var postDiv = document.createElement('div');
-                    postDiv.className = 'post';
-    
-                    // 创建h2元素并设置文本
-                    var postTitle = document.createElement('h2');
-                    postTitle.textContent = cleanPostTitle;
-    
-                    // 添加点击事件，导航到文章页面
-                    postTitle.onclick = function() {
-                        // 编码路径并构建完整的URL
-                        var encodedTitle = encodeURIComponent(cleanPostTitle.replace(/\s+/g, '-').toLowerCase());
-                        var postUrl = 'assets/blog/post/' + encodedTitle + '/index.html';
-                        window.location.href = postUrl;
-                    };
-    
-                    // 将h2元素添加到div中
-                    postDiv.appendChild(postTitle);
-    
-                    // 将div添加到容器中
-                    container.appendChild(postDiv);
-                });
-            }
-        };
-        xhr.send();
-    }
-    
-    // 页面加载完成后调用函数
-    window.onload = loadAndProcessPosts;
+    <script>
+        function loadAndProcessPosts() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'assets/blog/postlist.txt', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var posts = xhr.responseText.split('\n'); // 正确的分割函数
+                    var container = document.getElementById('postListContainer');
+                    posts.forEach(function (post) {
+                        // 去除每行末尾的分号（如果存在），并去除空白字符
+                        var cleanPostTitle = post.replace(/;+$/, '').trim();
+
+                        // 创建一个新的div元素
+                        var postDiv = document.createElement('div');
+                        postDiv.className = 'post';
+
+                        // 创建h2元素并设置文本
+                        var postTitle = document.createElement('h2');
+                        postTitle.textContent = cleanPostTitle;
+
+                        // 添加点击事件，导航到文章页面
+                        postTitle.onclick = function () {
+                            // 编码路径并构建完整的URL
+                            var encodedTitle = encodeURIComponent(cleanPostTitle.replace(/\s+/g, '-').toLowerCase());
+                            var postUrl = 'assets/blog/post/' + encodedTitle + '/index.html';
+                            window.location.href = postUrl;
+                        };
+
+                        // 将h2元素添加到div中
+                        postDiv.appendChild(postTitle);
+
+                        // 将div添加到容器中
+                        container.appendChild(postDiv);
+                    });
+                }
+            };
+            xhr.send();
+        }
+
+        // 页面加载完成后调用函数
+        window.onload = loadAndProcessPosts;
     </Script>
 </body>
 
@@ -160,16 +159,20 @@
         <span id="sitetime" style="color: white;"></span>
         <br /><br />
         <a href="https://github.com/Windowsbang">
-            <img src="./assets/img/LsGithub.svg" alt="GitHub">
+            <img src="/assets/img/LsGithub.svg" alt="GitHub">
         </a>
 
         <a href="https://www.jxbjsoft.cn">
-            <img src="./assets/img/机械斑鸠软件white.svg" alt="JXBJSoft">
+            <img src="/assets/img/机械斑鸠软件white.svg" alt="JXBJSoft">
         </a>
         <font color="white">
             <center>
                 浏览量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>👀 | 访客数：<span
                     id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>👦
+                <br />
+
+                <a style="color: white;" href="https://guan.ma/hao/2024000152/" ; title="官码2024000152号"><img
+                        src="https://style.wmou.com/images/guanma.png" ; alt="官码">官码2024000152号</a>
             </center>
         </font>
 
