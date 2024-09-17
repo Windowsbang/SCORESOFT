@@ -62,6 +62,9 @@ li {
 
 body {
     margin: 0;
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+
+-webkit-filter: grayscale(100%);
 }
 
 #slogan {

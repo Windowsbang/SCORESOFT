@@ -106,7 +106,6 @@
                     var posts = xhr.responseText.split('\n'); // 正确的分割函数
                     var container = document.getElementById('postListContainer');
                     posts.forEach(function (post) {
-                        // 去除每行末尾的分号（如果存在），并去除空白字符
                         var cleanPostTitle = post.replace(/;+$/, '').trim();
 
                         // 创建一个新的div元素
