@@ -62,9 +62,10 @@ li {
 
 body {
     margin: 0;
-    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-
--webkit-filter: grayscale(100%);
+    /*
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(100%);
+    */
 }
 
 #slogan {
@@ -185,24 +186,35 @@ footer img {
     /* 圆形内的文字 */
     position: absolute;
     top: 50%;
-    left: 5px; /* 根据需要调整 */
-    height: 40px; /* 圆形的高度 */
-    width: 40px; /* 圆形的宽度 */
-    line-height: 40px; /* 使文字垂直居中 */
-    border-radius: 50%; /* 圆形边框 */
-    background-color: #fff; /* 圆形背景色 */
-    color: #a94547; /* 圆形内文字的颜色 */
-    text-align: center; /* 文字在圆形内居中 */
-    font-weight: bold; /* 加粗文字 */
+    left: 5px;
+    /* 根据需要调整 */
+    height: 40px;
+    /* 圆形的高度 */
+    width: 40px;
+    /* 圆形的宽度 */
+    line-height: 40px;
+    /* 使文字垂直居中 */
+    border-radius: 50%;
+    /* 圆形边框 */
+    background-color: #fff;
+    /* 圆形背景色 */
+    color: #a94547;
+    /* 圆形内文字的颜色 */
+    text-align: center;
+    /* 文字在圆形内居中 */
+    font-weight: bold;
+    /* 加粗文字 */
     transform: translateY(-50%);
     /* 垂直居中 */
-    opacity: 0; /* 初始时圆形不可见 */
+    opacity: 0;
+    /* 初始时圆形不可见 */
     transition: opacity 0.3s, transform 0.3s;
     /* 鼠标悬停时圆形变化的动画 */
 }
 
 #postListContainer h2:hover::before {
-    opacity: 1; /* 鼠标悬停时圆形可见 */
+    opacity: 1;
+    /* 鼠标悬停时圆形可见 */
     transform: scale(1.5) translateY(-50%);
     /* 鼠标悬停时圆形放大并垂直居中 */
 }
@@ -212,5 +224,6 @@ footer img {
     /* 鼠标悬停时按钮背景颜色变化 */
     text-align: right;
     /* 鼠标悬停时文字居左 */
-    padding-left: 20px; /* 为圆形留出空间 */
+    padding-left: 20px;
+    /* 为圆形留出空间 */
 }
